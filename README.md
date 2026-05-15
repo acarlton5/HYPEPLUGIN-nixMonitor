@@ -118,7 +118,7 @@ Add to your home-manager `flake.nix`:
 #### For NixOS
 
 1. Rebuild your NixOS configuration: `sudo nixos-rebuild switch --flake .#hostname`
-2. Restart DMS: `dms restart`
+2. Restart DMS: `hype restart`
 3. Open DMS Settings → Plugins
 4. Click "Scan for Plugins"
 5. Toggle "Nix Monitor" ON
@@ -127,7 +127,7 @@ Add to your home-manager `flake.nix`:
 #### For home-manager
 
 1. Rebuild your home-manager configuration: `home-manager switch --flake .#home`
-2. Restart DMS: `dms restart`
+2. Restart DMS: `hype restart`
 3. Open DMS Settings → Plugins
 4. Click "Scan for Plugins"
 5. Toggle "Nix Monitor" ON
@@ -142,7 +142,7 @@ After updating the plugin:
 nix flake update nix-monitor
 sudo nixos-rebuild switch --flake .#hostname
 rm -rf ~/.cache/quickshell/qmlcache/
-dms restart
+hype restart
 ```
 
 #### For home-manager
@@ -152,7 +152,7 @@ After updating the plugin:
 nix flake update nix-monitor
 home-manager switch --flake .#home
 rm -rf ~/.cache/quickshell/qmlcache/
-dms restart
+hype restart
 ```
 
 **Note:** Due to QML disk caching with Nix symlinks, you must clear the QML cache after plugin updates for changes to take effect.
